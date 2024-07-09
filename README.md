@@ -10,7 +10,7 @@ BetterEditorCollab is a combined mod for Geometry Dash that enhances the in-game
 
 ## Installation
 
-1. Download the latest `.geode` file from the [Releases](https://github.com/yourusername/BetterEditorCollab/releases) page.
+1. Download the latest `.geode` file from the [Releases](https://github.com/entity12208/BetterEditorCollab/releases) page.
 2. Move the `.geode` file to your Geometry Dash mods directory.
 
 ## License
