@@ -1,0 +1,7 @@
+{
+    "name": "BetterEditorCollabX",
+    "version": "1.0.0",
+    "description": "An enhanced collaboration mod for Geometry Dash.",
+    "author": "Entity12208",
+    "main": "build/BetterEditorCollab.dll"
+}
