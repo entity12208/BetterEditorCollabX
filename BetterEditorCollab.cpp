@@ -1,4 +1,5 @@
 #include <Geode/modify/LevelEditorLayer.hpp>
+#include "BetterEditorCollab.h"
 #include <Geode/modify/GameObject.hpp>
 #include <json/json.h>
 #include <websocketpp/config/asio_no_tls_client.hpp>
