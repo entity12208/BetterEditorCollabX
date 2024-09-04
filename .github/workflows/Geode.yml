@@ -8,11 +8,11 @@ on:
     # Which version of the SDK to use.
     # Set to 'nightly' for latest commit, 'latest' for latest release
     # Default: latest
-    sdk: ''
+    sdk: 'latest'
 
     # Which CLI version to use.
     # Default: latest
-    cli: ''
+    cli: 'latest'
 
     # Extra arguments passed to CMake when configuring. Not required.
     configure-args: ''
@@ -33,14 +33,14 @@ on:
 
     # Set this to true if you plan on merging .geode files later. See the README for more info.
     # Default: false
-    combine: ''
+    combine: 'false'
 
     # Geode target to build for. Can be either "Win64", "MacOS", "Android32" or "Android64".
     # Defaults to what is appropriate for the current platform, so:
     # Defaults to Win64 on windows runners
     # Defaults to MacOS on macOS runners
     # Defaults to Android64 on linux runners
-    target: ''
+    target: 'Win64'
 
     # What repository to use for bindings. Must be in the format "user/repo". Not required.
     bindings: ''
@@ -53,4 +53,4 @@ on:
 
     # Whether to use Link Time Optimization, improving build size at the cost of build time.
     # Default: true
-    use-lto: ''
+    use-lto: 'true'
