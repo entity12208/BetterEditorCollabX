@@ -1,56 +1,32 @@
 name: Geode
+
 on:
-  workflow_dispatch:
-    jobs:
-      - name: Run Main
-      - uses: geode-sdk/build-geode-mod@main
-      with:
-    # Which version of the SDK to use.
-    # Set to 'nightly' for latest commit, 'latest' for latest release
-    # Default: latest
-        sdk: 'latest'
+  push:
+    branches:
+      - main
+  workflow_dispatch: # This enables manual triggering of the workflow
 
-    # Which CLI version to use.
-    # Default: latest
-        cli: 'latest'
+jobs:
+  build:
+    runs-on: windows-latest
 
-    # Extra arguments passed to CMake when configuring. Not required.
-        configure-args: ''
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    # Extra arguments passed to CMake when building. Not required.
-        build-args: ''
-
-    # Which build configuration to use.
-    # Default: Release
-        build-config: ''
-
-    # Whether to export PDB files for Windows builds. Not required.
-    # Default: false
-        export-pdb: ''
-
-    # Path to the project which to build. Defaults to current directory.
-        path: ''
-
-    # Set this to true if you plan on merging .geode files later. See the README for more info.
-    # Default: false
-        combine: 'false'
-
-    # Geode target to build for. Can be either "Win64", "MacOS", "Android32" or "Android64".
-    # Defaults to what is appropriate for the current platform, so:
-    # Defaults to Win64 on windows runners
-    # Defaults to MacOS on macOS runners
-    # Defaults to Android64 on linux runners
-        target: 'Win64'
-
-    # What repository to use for bindings. Must be in the format "user/repo". Not required.
-        bindings: ''
-
-    # Which commit/branch to use for bindings. Defaults to latest commit in main branch. Not required.
-        bindings-ref: ''
-
-    # The android min SDK version to target. Defaults to 23. Not required.
-        android-min-sdk: ''
-
-    # Whether to use Link Time Optimization, improving build size at the cost of build time.
-    # Default: true
-        use-lto: 'true'
+      - name: Build Geode mod
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: 'latest'
+          cli: 'latest'
+          configure-args: ''
+          build-args: ''
+          build-config: ''
+          export-pdb: ''
+          path: ''
+          combine: 'false'
+          target: 'Win64'
+          bindings: ''
+          bindings-ref: ''
+          android-min-sdk: ''
+          use-lto: 'true'
