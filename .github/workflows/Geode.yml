@@ -1,6 +1,6 @@
 name: Geode
 on:
-  push:
+  push, workflow_dispatch:
     jobs:
       - name: Run Main
       - uses: geode-sdk/build-geode-mod@main
