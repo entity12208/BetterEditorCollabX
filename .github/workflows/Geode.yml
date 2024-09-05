@@ -21,7 +21,7 @@ jobs:
           cli: 'latest'
           configure-args: ''
           build-args: ''
-          build-config: ''
+          build-config: 'release'
           export-pdb: ''
           path: ''
           combine: 'false'
